@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+		<h3>
+			<a href="/newpost">New Entry</a>
+		</h3>
+
+
+		<div class="blog-title">{{post.title}}</div>
+		<div class="date_created">{{post.created}}</div>
+		<hr>
+		<pre class="blog-body">{{post.blog_body}}</pre>
+
+{% endblock %}

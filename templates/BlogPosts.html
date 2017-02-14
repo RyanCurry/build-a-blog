@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+		<h3>
+			<a href="/newpost">New Entry</a>
+		</h3>
+
+
+	{% for blog in blogs %}
+		<div class ="blog-post">
+				<div class= "blog-title">
+					<a href="/blog/{{blog.key().id()}}" class="blog-title-link">{{blog.title}}</a>
+				</div>
+			<div class="date_created">{{blog.created}}</div>
+			<hr>
+			<pre class="blog-body">{{blog.blog_body}}</pre>
+		</div>
+	{% endfor %}
+
+
+	<div class="pagebuttons">
+	<a class = "prevpage" href="/blog?page={{PageNum-1}}">{{Prev}}</a> 
+	<a class = "nextpage" href="/blog?page={{PageNum+1}}">{{Nextp}}</a>
+	</div>
+{% endblock %}

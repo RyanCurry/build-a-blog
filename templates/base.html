@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blog</title>
+		<style type="text/css">
+			.error {
+			color: red;
+			}
+
+			h1 {text-align:center;}
+			h3 {text-align:center;}
+
+
+
+			.pagebuttons {
+			text-align:center;
+			margin:20px auto;
+			display:block; 
+			width:120px
+}
+
+
+			.blog-title-link {
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 20px;
+			}
+
+
+			.blog-title {
+			text-align:center;
+			display:block; 
+			}
+
+
+			.blog-post {
+			
+			padding: 100px 200px 0px 200px ;
+			margin: auto;
+			}
+
+
+
+			.date_created {
+			text-align: right;
+			
+			}
+
+			
+			
+			.blog-body {
+			text-align: center;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a href="/blog">Blog</a>
+		</h1>
+
+		{% block content %}
+	        {% endblock %}
+
+	</body>
+</html>
